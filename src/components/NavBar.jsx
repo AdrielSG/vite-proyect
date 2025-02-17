@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Navbar.css';
+import './Navbar_styles.css';
 import { NavLink } from 'react-router-dom';
 import darkmodeOff from '/src/imagenes/darkmodeOff.png';
 import darkmodeOn from '/src/imagenes/darkmodeOn.png'; // Imagen del modo oscuro activado
