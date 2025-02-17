@@ -1,0 +1,150 @@
+/* Definición de variables de modo claro y oscuro */
+
+/* Modo Claro (por defecto) */
+:root {
+  --button-background-color: #ffffff; /* Fondo blanco */
+  --button-text-color: #1e1e2f; /* Texto oscuro */
+  --button-border-color: #1e1e2f; /* Borde oscuro */
+  --button-hover-background-color: #e0e0e0; /* Hover gris claro */
+  --button-selected-border-color: #1e1e2f; /* Borde oscuro al seleccionar */
+  --button-selected-background-color: #1e1e2f; /* Fondo oscuro al seleccionar */
+  --button-selected-text-color: #ffffff; /* Texto blanco al seleccionar */
+  
+  --background-color: #f8f8f8; /* Fondo claro */
+  --text-color: #1e1e2f; /* Texto oscuro */
+}
+
+/* Modo Oscuro */
+.dark-mode {
+  --button-background-color: #1e1e2f; /* Fondo oscuro */
+  --button-text-color: #ffffff; /* Texto claro */
+  --button-border-color: #ffffff; /* Borde claro */
+  --button-hover-background-color: #444444; /* Hover gris oscuro */
+  --button-selected-border-color: #ffffff; /* Borde blanco al seleccionar */
+  --button-selected-background-color: #ffffff; /* Fondo blanco al seleccionar */
+  --button-selected-text-color: #1e1e2f; /* Texto oscuro al seleccionar */
+
+  --background-color: #2e2e3d; /* Fondo oscuro */
+  --text-color: #ffffff; /* Texto blanco */
+}
+
+/* Estilos generales */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color); /* Fondo variable */
+  color: var(--text-color); /* Texto variable */
+}
+
+/* Diseño del contenedor principal */
+.Api {
+  display: flex;
+  flex-direction: column;
+  min-height: 90vh; /* Asegura que la página ocupe todo el alto */
+}
+
+/* Estilo de los botones de filtro */
+.filters button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid var(--button-border-color);
+  border-radius: 5px;
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  margin: 5px;
+}
+
+/* Hover sobre los botones */
+.filters button:hover {
+  background-color: var(--button-hover-background-color);
+}
+
+/* Estilos cuando el botón está seleccionado */
+.filters button.selected {
+  border: 2px solid var(--button-selected-border-color); /* Borde más destacado al seleccionar */
+  background-color: var(--button-selected-background-color); /* Fondo específico al seleccionar */
+  color: var(--button-selected-text-color); /* Texto específico al seleccionar */
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Animación suave */
+}
+
+/* Estilos para los resultados de la búsqueda */
+.results {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.box {
+  background-color: var(--button-background-color);
+  border-radius: 5px;
+  border: 1px solid var(--button-border-color);
+  padding: 20px;
+  width: 45%;
+  box-sizing: border-box;
+}
+
+.box h3 {
+  margin: 0 0 10px 0;
+}
+
+/* Estilo para la sección de búsqueda */
+.search-section {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.search-section {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.search-section input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid var(--button-border-color);
+  width: 250px; /* Ajustar el tamaño del input */
+  transition: border-color 0.3s;
+}
+
+.search-section button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid var(--button-border-color);
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Indicador de carga */
+.loading {
+  font-size: 18px;
+  color: #00aaff;
+  font-weight: bold;
+}
+
+/* Estilo para los errores */
+.error {
+  color: red;
+  font-weight: bold;
+}
+
+/* Pie de página */
+footer {
+  margin-top: auto;
+  padding: 20px;
+  text-align: center;
+  background-color: var(--button-background-color);
+  border-top: 1px solid var(--button-border-color);
+}
