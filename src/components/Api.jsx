@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Api.css';
+import './Api_styles.css';
 import { getStockData } from '/src/servicios/apiServicio';
 
 const Api = ({ isDarkMode, toggleDarkMode }) => {
